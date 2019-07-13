@@ -1,0 +1,31 @@
+This is to bring a new themeing function simular to Adobe's CC themes to Gimp. It won't use Kuler themes or at least right now. It'll also have  afunction to send images from phone (iphone and android) to Gimp and hopefully open it in Gimp or a notification. Have a notification when one is uplaoded from desktop or another devise.
+
+apps I need to make
+
+Desktop app that will sit in the tray.
+Gimp plugin that will look for that app.
+Server, if I can't make it in PHP at my site.
+Android app that will look at the server.
+iPhone app that will look at the server.
+
+ _______Gimp plugin_____________________________________________________
+| Interface in gimp's sidebar will show the themes in user account	|
+| Will listen for the tray app to find a image on the server		|
+ \_____________________________________________________________________/
+
+ _______Desktop app_____________________________________________________________________________________
+| Will chck server every few seconds/minutes for a new image being uploaded then update a database	|
+| Will be able to save settings and open a browser to the server's page.				|
+| Show notifications of new image in history (List from Database) 					|
+ \_____________________________________________________________________________________________________/
+
+ _______Mobile app______________________________________________________________________________________________
+| Make a Android app and iPhone app so the user can send image to desktop. Also download image on server	|
+| Get push notification on all devices when image has been uploaded						|
+ \_____________________________________________________________________________________________________________/
+
+ _______Server app______________________________________________________________________________________
+| Will save color themes in a xml database maybe in a mysql database that the other apps will read.	|
+| Have name of themes and a preview of each color.							|
+| Save one or a few images in a folder then update mysql database. Delete old images to save space.	|
+ \_____________________________________________________________________________________________________/
