@@ -1,0 +1,10 @@
+<?php
+$host="gimpcloud.db.7684787.f67.hostedresource.net";
+$mysqli = new mysqli($host, "gimpcloud", "M01!artinfan", "gimpcloud");
+
+if ($con->connect_error) {
+  die ("connection failed :" . $con-> connect_error);
+}
+
+
+?>
