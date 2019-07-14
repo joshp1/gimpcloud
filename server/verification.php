@@ -22,6 +22,6 @@ $count = mysqli_num_rows($result);
 if ($count == 1){
 echo "Logined";
 }else{echo "I guess not logeded in";
-}
+}     echo $count;
 }
 ?>
