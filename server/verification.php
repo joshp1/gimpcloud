@@ -10,8 +10,8 @@ if (!$select_db){
 if (isset($_POST['user_id']) and isset($_POST['user_pass'])){
 
 // Assigning POST values to variables.
-$username = $_POST['user_id'];
-$password = $_POST['user_pass'];
+$username = $_POST['un1'];
+$password = $_POST['ps1'];
 
 // CHECK FOR THE RECORD FROM TABLE
 $query = "SELECT * FROM `user_login` WHERE username='$username' and Password='$password'";
