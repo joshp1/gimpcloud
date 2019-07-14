@@ -21,7 +21,7 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
    if ($_COOKIE ['loginfo']){
      setcookie ('loginfo', '', time () - 3600);
      setcookie ('UsrID', 'UID');
-     echo $result;
+
      header ($_SERVER ['HTTP_REFERER']);
    } else {
      if ($count == 1){
