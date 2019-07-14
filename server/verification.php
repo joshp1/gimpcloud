@@ -14,7 +14,7 @@ $username = $_POST['un1'];
 $password = $_POST['ps1'];
 
 // CHECK FOR THE RECORD FROM TABLE
-$query = "SELECT * FROM `user_login` WHERE username='$username' and Password='$password'";
+$query = "SELECT * FROM `un1` WHERE username='$username' and Password='$password'";
 
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 $count = mysqli_num_rows($result);
