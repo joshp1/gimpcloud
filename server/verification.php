@@ -18,7 +18,7 @@ $query = "SELECT * FROM `Main` WHERE username='$username' and Password='$passwor
 
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 $count = mysqli_num_rows($result);
-echo $count;
+
 if ($count == 1){
 echo "Logined";
 $value= 'logged';
