@@ -22,7 +22,7 @@ $count = mysqli_num_rows($result);
 if ($count == 1){
 $value= 'logged';
 setcookie ('loginfo', $value);
-header ("location:index.php");
+header ($_SERVER ['HTTP_REFERER']);
 }else{echo "I guess not logeded in";
 }
 }
