@@ -5,7 +5,7 @@ Gimp Cloud
     </title>
   </head>
   <body><?php
-    Color themes
+    print 'Color themes';
     if ($_COOKIE ['loginfo'])
     {
     print "loged N";
