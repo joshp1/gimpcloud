@@ -7,7 +7,7 @@ $select_db = mysqli_select_db($connection, 'gimpcloud');
 if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
 }
-if (isset($_POST['user_id']) and isset($_POST['user_pass'])){
+if (isset($_POST['un1']) and isset($_POST['ps1'])){
 
 // Assigning POST values to variables.
 $username = $_POST['un1'];
