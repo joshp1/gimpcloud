@@ -22,7 +22,7 @@ Gimp Cloud
       if ($res->num_rows >0){
       while ($row=$res->fetch_assoc ()) {
         echo $row ['theme_name'] . '<br />' . $row [theme_color];
-      } echo "<a"
+       echo "<a href='verification.php'>";
     } else {
       print "Nothing in database. You need to add stuff first";
     }
