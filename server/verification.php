@@ -22,6 +22,7 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
      setcookie ('loginfo', '', time () - 3600);
      setcookie ('UsrID', 'UID');
      echo $result;
+     header ($_SERVER ['HTTP_REFERER']);
    } else {
      if ($count == 1){
        $value= 'logged';
