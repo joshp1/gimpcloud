@@ -20,8 +20,8 @@ $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 $count = mysqli_num_rows($result);
 
 if ($count == 1){
-
-}else{
+echo "Logined";
+}else{echo "I guess not logeded in";
 }
 }
 ?>
