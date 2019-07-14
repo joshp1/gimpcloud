@@ -3,7 +3,7 @@ $connection = mysqli_connect('gimpcloud.db.7684787.f67.hostedresource.net', 'gim
 if (!$connection){
     die("Database Connection Failed" . mysqli_error($connection));
 }
-$select_db = mysqli_select_db($connection, 'mashlog_demo');
+$select_db = mysqli_select_db($connection, 'gimpcloud');
 if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
 }
