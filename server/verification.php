@@ -22,7 +22,8 @@ echo $count;
 if ($count == 1){
 echo "Logined";
 $value= 'logged';
-$setcookie ('loginfo', $value);header ("location:index.php");
+$setcookie ('loginfo', $value);
+header ("location:index.php");
 }else{echo "I guess not logeded in";
 }
 }
