@@ -11,6 +11,11 @@ Gimp Cloud
       print "loged N";
       $UserID= $_COOKIE ['UsrID'];
 
+      $servn = 'gimpcloud.db.7684787.f67.hostedresource.net';
+      $uname = 'gimpcloud';
+      $pasw = 'M01!artinfan';
+      $dbn = 'gimpcloud';
+
       $cnnn = new mysqli ($servn, $uname, $pasw, $dbn);
       if ($cnnn-> connect_error){
         die ("Conection faild: " . $cnnn->connect_error);
