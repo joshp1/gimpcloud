@@ -43,7 +43,7 @@ Gimp Cloud
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
           echo "<rect width='50' height='50' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
-          echo "<text fill='red' x='60' y='".$y."'>".$rwo [$x]."</text>";
+          echo "<text fill='red' x='".$y."' y='60'>".$rwo [$x]."</text>";
           echo "</g>";
         }
        echo "</svg><br />\n<a href='verification.php'>";
