@@ -21,7 +21,7 @@ if (!$select_db){
 
  // query to add data into database
     $query = "INSERT INTO color (UID, theme_name, theme_color) VALUE ('".$UID."', '".$clrN."', '". $clr1.",".$clr2."','".$clr3."','".$clr4."','".$clr5."','".$clr6."')";
-    if ($connection->query ($sql) === TRUE) {
+    if ($connection->query ($query) === TRUE) {
       Echo "Success I guess";
     } else {
       echo "Eror: ". $sql. "<br />". $connection->error;
