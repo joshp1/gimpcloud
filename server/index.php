@@ -44,7 +44,7 @@ Gimp Cloud
           $yy=$x*70;
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
-          echo "<rect width='70' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
+          echo "<rect width='90' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
           echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
           echo "</g>";
         }
