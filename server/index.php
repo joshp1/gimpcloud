@@ -8,6 +8,7 @@ Gimp Cloud
       {
         alert ("clicked" + clr);
       }
+      </script>
   </head>
   <body><?php
     print "\nColor themes \n<br />\n";
