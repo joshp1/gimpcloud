@@ -27,7 +27,11 @@ Gimp Cloud
       if ($res->num_rows >0){
       while ($row=$res->fetch_assoc ()) {
         $rwo = explode (",", $row [theme_color]);
-        print "\n Theme color count: ". count ($rwo);
+        $cnt=count ($rwo);
+        print "\n Theme color count: ". $cnt;
+        for ($x = 0;$x<$cnt; $x++){
+          echo $rwo [$x];
+        }
         echo $row ['theme_name'] . '<br />' . $row ['theme_color'];
        echo "<a href='verification.php'>";
      }
