@@ -30,7 +30,7 @@ Gimp Cloud
         $cnt=count ($rwo);
         print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<h1>". $row ['theme_name']. "</h1>";
-        echo "<svg>"
+        echo "<svg>";
         for ($x = 0;$x<$cnt; $x++){
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<rect width='300' height='100' style='fill:". $rwo [$x]. "' />"
