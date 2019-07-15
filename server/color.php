@@ -13,11 +13,11 @@ if (!$select_db){
    // Assigning POST values to variables.
   $clrN= $_POST ['clrN'];
  $clr1 = $_POST['clr1'];
- $clr2 = $_POST['clr2'];
- $clr3 = $_POST ['clr3'];
- $clr4 = $_POST ['clr4'];
- $clr5 = $_POST['clr5'];
- $clr6 = $_POST['clr6'];
+$clr2 = $_POST['clr2'];
+$clr3 = $_POST ['clr3'];
+$clr4 = $_POST ['clr4'];
+$clr5 = $_POST['clr5'];
+$clr6 = $_POST['clr6'];
 
  // query to add data into database
     $query = "INSERT INTO color (UID, theme_name, theme_color) VALUES ('".$UID."', '".$clrN."', '". $clr1.",".$clr2.",".$clr3.",".$clr4.",".$clr5.",".$clr6."')";
