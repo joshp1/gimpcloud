@@ -6,7 +6,7 @@ Gimp Cloud
     <script>
       function clipcolor (clr)
       {
-        alert ("clicked" + clr);
+        alert ("clicked: " + clr);
       }
       </script>
   </head>
