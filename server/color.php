@@ -28,4 +28,4 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
       echo "Eror: ". $sql. "<br />". $connection->error;
     }
 
-$connection->close;?>
+$connection->close ();?>
