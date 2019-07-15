@@ -27,8 +27,8 @@ Gimp Cloud
       if ($res->num_rows >0){
       while ($row=$res->fetch_assoc ()) {
         $rwo = explode (",", $row [theme_color]);
-        print $rwo;
-        echo $row ['theme_name'] . '<br />' . $row [theme_color];
+        print count ($rwo ['theme_color']);
+        echo $row ['theme_name'] . '<br />' . $row ['theme_color'];
        echo "<a href='verification.php'>";
      }
     } else {
