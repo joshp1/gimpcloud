@@ -14,7 +14,7 @@ Gimp Cloud
         $.ajax ({
           type:'POST',
           url : 'verification.php',
-          data: 'delete_id='=del_id,
+          data: 'delete_id='+del_id,
           success: function (data)
           {
 
