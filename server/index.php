@@ -5,7 +5,7 @@ Gimp Cloud
     </title>
     <script>
       function clipcolor (clr)
-      { clr.select ();
+      { clr.execCommand ('copy');
         alert ("clicked: " + clr);
         document.execCommand('copy');
       }
