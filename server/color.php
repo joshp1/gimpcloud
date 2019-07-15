@@ -20,7 +20,7 @@ if (!$select_db){
  $clr6 = $_POST['clr6'];
 
  // query to add data into database
-    $query = "INSERT INTO color (UID, theme_name, theme_color) VALUE ('".$UID.", ".$clrN.", '". $clr1.",".$clr2.",".$clr3.",".$clr4.",".$clr5.",".$clr6."')";
+    $query = "INSERT INTO color (UID, theme_name, theme_color) VALUES ('".$UID.", ".$clrN.", '". $clr1.",".$clr2.",".$clr3.",".$clr4.",".$clr5.",".$clr6."')";
     if (mysqli_query ($connection, $query)) {
       echo "Success I guess";
     } else {
