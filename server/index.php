@@ -48,7 +48,7 @@ Gimp Cloud
           echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
           echo "</g>";
         }
-       echo "</svg><br />\n<a href='verification.php'>";
+       echo "</svg><br />\n<a href='verification.php'> not sure</a>";
      }
     } else {
       print "Nothing in database. You need to add stuff first";
