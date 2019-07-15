@@ -17,7 +17,7 @@ Gimp Cloud
           data: 'delete_id='=del_id,
           success: function (data)
           {
-            
+
           }
         });
       });
@@ -59,7 +59,7 @@ Gimp Cloud
         echo "<div id='clrbx'>";
         echo "<div id='dltbt'>X</div>";
         echo "<svg width='420'>";
-        echo "<text font-size='50'>" . $row ['theme_name'] . "</text>"
+        echo "<text font-size='50'>" . $row ['theme_name'] . "</text>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
           $yy=$x*70;
