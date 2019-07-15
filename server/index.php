@@ -11,7 +11,7 @@ Gimp Cloud
         alert ("clicked: " + clr);
         document.execCommand('copy');
       }
-      $("#dltbx").click (function (){
+      $("#dltbt").click (function (){
         var del_id = $(this).attr ('id');
         $.ajax ({
           type:'POST',
