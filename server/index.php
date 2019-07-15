@@ -9,8 +9,27 @@ Gimp Cloud
         alert ("clicked: " + clr);
         document.execCommand('copy');
       }
-      aa (xx) {}
+      $("#dltbx").click (function (){
+        var del_id = $(this).attr ('id');
+        $.ajax ({
+          type:'POST',
+          url : 'verification.php',
+          data: 'delete_id='=del_id,
+          success: function (data)
+          {
+            
+          }
+        });
+      });
       </script>
+      <style>
+        #clrbx
+        {
+          Border: 1px solid black;
+          display: inline_block;
+          float: left;
+        }
+      </style>
   </head>
   <body><?php
     print "\nColor themes \n<br />\n";
@@ -37,8 +56,10 @@ Gimp Cloud
         $rwo = explode (",", $row [theme_color]);
         $cnt=count ($rwo);
         print "\n Theme color count: ". $cnt. " \n <br />";
-        echo "<h1>". $row ['theme_name']. "</h1>";
+        echo "<div id='clrbx'>";
+        echo "<div id='dltbt'>X</div>";
         echo "<svg width='420'>";
+        echo "<text font-size='50'>" . $row ['theme_name'] . "</text>"
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
           $yy=$x*70;
@@ -48,7 +69,7 @@ Gimp Cloud
           echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
           echo "</g>";
         }
-       echo "</svg><br />\n<a href='verification.php'> not sure</a>";
+       echo "</svg><br />\n<a href='verification.php'> not sure</a></div>";
      }
     } else {
       print "Nothing in database. You need to add stuff first";

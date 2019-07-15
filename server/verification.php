@@ -30,4 +30,10 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
        header ($_SERVER ['HTTP_REFERER']);
      }else{echo "I guess not logeded in";
   }
-} }?>
+} }
+
+$id = $_POST ['delete_id'];
+
+if ($id){
+  mysqli_query ($connection, $sql);}
+?>
