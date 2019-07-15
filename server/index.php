@@ -5,10 +5,10 @@ Gimp Cloud
     </title>
   </head>
   <body><?php
-    print 'Color themes\n<br />';
+    print "Color themes \n<br />\n";
     if ($_COOKIE ['loginfo'])
     {
-      print "loged N\n<br />";
+      print "loged N\n<br />\n";
       $UserID= $_COOKIE ['UsrID'];
 
       $servn = 'gimpcloud.db.7684787.f67.hostedresource.net';
@@ -27,7 +27,7 @@ Gimp Cloud
       if ($res->num_rows >0){
       while ($row=$res->fetch_assoc ()) {
         $rwo = explode (",", $row [theme_color]);
-        print "\ntheme color count: "+count ($rwo ['theme_color']);
+        print "\n Theme color count: ". count ($rwo);
         echo $row ['theme_name'] . '<br />' . $row ['theme_color'];
        echo "<a href='verification.php'>";
      }
