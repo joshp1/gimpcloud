@@ -38,7 +38,7 @@ Gimp Cloud
         $cnt=count ($rwo);
         print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<h1>". $row ['theme_name']. "</h1>";
-        echo "<svg>";
+        echo "<svg width='300'>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
           $yy=$x*70;
