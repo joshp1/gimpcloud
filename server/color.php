@@ -24,7 +24,7 @@ if (!$select_db){
     if ($connection->query ($query) === TRUE) {
       Echo "Success I guess";
     } else {
-      echo "Eror: ". $sql. "<br />". $connection->error;
+      echo "Eror: ". $sql. "<br />". $connection->error. " " .$query;
     }
 
 $connection->close ();?>
