@@ -38,13 +38,13 @@ Gimp Cloud
         $cnt=count ($rwo);
         print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<h1>". $row ['theme_name']. "</h1>";
-        echo "<svg width='3000'>";
+        echo "<svg width='420'>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
           $yy=$x*70;
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
-          echo "<rect width='190' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
+          echo "<rect width='75' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
           echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
           echo "</g>";
         }
