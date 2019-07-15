@@ -8,9 +8,9 @@ if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
 }
 
-   // UserID cookcie
-   $UID= $_COOKIE ['UsrID'];
-  // Assigning POST values to variables.
+     // UserID cookcie
+    $UID= $_COOKIE ['UsrID'];
+   // Assigning POST values to variables.
   $clrN= $_POST ['clrN'];
  $clr1 = $_POST['clr1'];
  $clr2 = $_POST['clr2'];
@@ -21,8 +21,8 @@ if (!$select_db){
 
  // query to add data into database
     $query = "INSERT INTO color (UID, theme_name, theme_color) VALUE ('".$UID."', '".$clrN."', '". $clr1.",".$clr2."','".$clr3."','".$clr4."','".$clr5."','".$clr6."')";
-    if ($connection->query ($query) === TRUE) {
-      Echo "Success I guess";
+    if (mysqli_query ($connection, $query)) {
+      echo "Success I guess";
     } else {
       echo "Eror: ". $sql. "<br />". $connection->error. " " .$query;
     }
