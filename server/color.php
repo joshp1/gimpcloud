@@ -7,7 +7,6 @@ $select_db = mysqli_select_db($connection, 'gimpcloud');
 if (!$select_db){
     die("Database Selection Failed" . mysqli_error($connection));
 }
-if (isset($_POST['un1']) and isset($_POST['ps1'])){
 
    // UserID cookcie
    $UID= $_COOKIE ['UsrID'];
@@ -28,4 +27,4 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
       echo "Eror: ". $sql. "<br />". $connection->error;
     }
 
-$connection->close ();}?>
+$connection->close ();?>
