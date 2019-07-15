@@ -53,8 +53,30 @@ Gimp Cloud
     } else {
       print "Nothing in database. You need to add stuff first";
     }
-    $cnnn->close ();
-  } else {
+    $cnnn->close ();?>
+
+    <div id="aa01">
+      <!-- New themea area needs to be a popup layer -->
+      <form action = "color.php" method = "post">
+        Theme name:
+        <input type="text" name='clrN' /> <br />
+        color 1:
+        <input type="text" name="clr1" /><br />
+        color 2:
+        <input type="text" name="clr2" /><br />
+        color 3:
+        <input type="text" name = "clr3" /><br />
+        color 4:
+        <input type="text" name="clr4" /><br />
+        color 5:
+        <input type="text" name ="clr5" /><br />
+        color 6:
+        <input type="text" name="clr6" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+<?  } else {
     ?>
     <form action='verification.php' method = 'post'>
       <input type='text' name='un1' value="inter username" />
