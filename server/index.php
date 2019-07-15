@@ -29,7 +29,6 @@ Gimp Cloud
         $rwo = explode (",", $row [theme_color]);
         $cnt=count ($rwo);
         print "\n Theme color count: ". $cnt. " \n <br />";
-        print "<svg width='100' height='100'>\n <rect width='50' height='50' style='fill'"
         for ($x = 0;$x<$cnt; $x++){
           echo $rwo [$x];
           echo "<span style='background-color:$rwo [$x]'>$rwo [$x]</span>";
@@ -47,7 +46,7 @@ Gimp Cloud
       <input type='text' name='un1' value="inter username" />
       <input type='password' name ='ps1' />
       <input type='submit' value = "Submit" />
-      <?}?>
     </form>
+      <?}?>
   </body>
 </html>
