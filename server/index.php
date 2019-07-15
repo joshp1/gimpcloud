@@ -19,7 +19,7 @@ Gimp Cloud
           data: 'delete_id='+del_id,
           success: function (data)
           {
-            console.log ("Click")
+            console.log ("Click");
           }
         });
       });
