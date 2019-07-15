@@ -33,6 +33,7 @@ Gimp Cloud
       print "Nothing in database. You need to add stuff first";
     }
     $cnnn->close ();
+  } else {
     ?>
     <form action='verification.php' method = 'post'>
       <input type='text' name='un1' value="inter username" />
