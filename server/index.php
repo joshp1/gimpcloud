@@ -41,8 +41,8 @@ Gimp Cloud
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*50;
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
-          echo "<g>"
-          echo "<rect width='50' height='50' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."'/n>\n";
+          echo "<g>";
+          echo "<rect width='50' height='50' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
           echo "<text fill='red' x='60' y='".$y."'>".$rwo [$x]."</text>";
           echo "</g>";
         }
