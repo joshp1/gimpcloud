@@ -19,8 +19,10 @@ Gimp Cloud
           data: 'delete_id='+del_id,
           success: function (data)
           {
-
-          }
+console.log ("Click")
+}else{
+  console.log ("anticlick");
+}
         });
       });
       </script>
@@ -61,12 +63,13 @@ Gimp Cloud
         echo "<div id='clrbx'>";
         echo "<div id='dltbt'>X</div>";
         echo "<svg width='420'>";
-        echo "<text font-size='50'>" . $row ['theme_name'] . "</text>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
           $yy=$x*70;
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
+
+          echo "<text font-size='50'>" . $row ['theme_name'] . "</text>";
           echo "<rect width='75' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
           echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
           echo "</g>";
