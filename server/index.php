@@ -31,9 +31,8 @@ Gimp Cloud
         print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<h1>". $row ['theme_name']. "</h1>";
         for ($x = 0;$x<$cnt; $x++){
-          echo "<span style='background-color:".$rwo [$x]."'>".$rwo [$x]."</span>";
+          echo "<span style='background-color:".$rwo [$x]."'>".$rwo [$x]."</span>\n <br />\n";
         }
-        echo $row ['theme_name'] . '<br />' . $row ['theme_color'];
        echo "<a href='verification.php'>";
      }
     } else {
