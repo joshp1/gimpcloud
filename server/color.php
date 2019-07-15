@@ -10,7 +10,7 @@ if (!$select_db){
 if (isset($_POST['un1']) and isset($_POST['ps1'])){
 
    // UserID cookcie
-   $UID= $_COOKIE ['UsrID']
+   $UID= $_COOKIE ['UsrID'];
   // Assigning POST values to variables.
   $clrN= $_POST ['clrN'];
  $clr1 = $_POST['clr1'];
