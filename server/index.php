@@ -7,7 +7,7 @@ Gimp Cloud
       function clipcolor (clr)
       {
         alert ("clicked: " + clr);
-        document.execCommand(clr);
+        document.execCommand('copy');
       }
       </script>
   </head>
