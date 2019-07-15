@@ -19,10 +19,8 @@ Gimp Cloud
           data: 'delete_id='+del_id,
           success: function (data)
           {
-console.log ("Click")
-}else{
-  console.log ("anticlick");
-}
+            console.log ("Click")
+          }
         });
       });
       </script>
