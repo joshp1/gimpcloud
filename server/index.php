@@ -5,7 +5,7 @@ Gimp Cloud
     </title>
   </head>
   <body><?php
-    print "Color themes \n<br />\n";
+    print "\nColor themes \n<br />\n";
     if ($_COOKIE ['loginfo'])
     {
       print "loged N\n<br />\n";
@@ -31,9 +31,9 @@ Gimp Cloud
         print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<h1>". $row ['theme_name']. "</h1>";
         for ($x = 0;$x<$cnt; $x++){
-          echo "<span style='background-color:".$rwo [$x]."'>".$rwo [$x]."</span>\n <br />\n";
+          echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
         }
-       echo "<a href='verification.php'>";
+       echo "<br />\n<a href='verification.php'>";
      }
     } else {
       print "Nothing in database. You need to add stuff first";
