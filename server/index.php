@@ -39,11 +39,11 @@ Gimp Cloud
         echo "<h1>". $row ['theme_name']. "</h1>";
         echo "<svg>";
         for ($x = 0;$x<$cnt; $x++){
-          $y=$x*55;
+          $y=$x*65;
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
-          echo "<rect width='50' height='50' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
-          echo "<text fill='black' x='".$y."' y='70'>".$rwo [$x]."</text>";
+          echo "<rect width='70' height='70' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
+          echo "<text fill='black' x='".$y."' y='110'>".$rwo [$x]."</text>";
           echo "</g>";
         }
        echo "</svg><br />\n<a href='verification.php'>";
