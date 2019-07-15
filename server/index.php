@@ -28,9 +28,11 @@ Gimp Cloud
       while ($row=$res->fetch_assoc ()) {
         $rwo = explode (",", $row [theme_color]);
         $cnt=count ($rwo);
-        print "\n Theme color count: ". $cnt;
+        print "\n Theme color count: ". $cnt. " \n <br />";
+        print "<svg width='100' height='100'>\n <rect width='50' height='50' style='fill'"
         for ($x = 0;$x<$cnt; $x++){
           echo $rwo [$x];
+          echo "<span style='background-color:$rwo [$x]'>$rwo [$x]</span>";
         }
         echo $row ['theme_name'] . '<br />' . $row ['theme_color'];
        echo "<a href='verification.php'>";
