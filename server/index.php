@@ -7,9 +7,15 @@ Gimp Cloud
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       function clipcolor (clr)
-      { document.getElementById ('dltbt')
-        alert ("clicked: " + clr);
-        document.execCommand('copy');
+      { alert ("clicked: " + clr);
+	console.log ('so far so good');
+	$.post ("verification.php",
+	{
+		delete_id: clr
+	},function (data, status)
+	{	console.log (data + " posted " + status);
+		window.location.reload ();
+	});
       }
 $(document).ready (function (){
       $("#dltbt").click (function (){
@@ -32,6 +38,11 @@ $(document).ready (function (){
           display: inline_block;
           float: left;
         }
+	#dltbt
+	{
+		display: inline_block;
+		float:right;
+	}
       </style>
   </head>
   <body><?php
@@ -58,9 +69,8 @@ $(document).ready (function (){
       while ($row=$res->fetch_assoc ()) {
         $rwo = explode (",", $row [theme_color]);
         $cnt=count ($rwo);
-        print "\n Theme color count: ". $cnt. " \n <br />";
         echo "<div id='clrbx'>";
-        echo "<div id='dltbt'>X</div>";
+        echo "<div class='dltbt' onclick=".'"'."clipcolor ('".$row ['theme_name']. "');".'"'.">X</div>";
         echo "<svg width='420'>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
@@ -68,9 +78,9 @@ $(document).ready (function (){
           //echo "<span>".$rwo [$x]."</span>\n<span style='width:10px; height:10px;background-color:".$rwo [$x].";'></span>\n";
           echo "<g>";
 
-          echo "<text font-size='50'>" . $row ['theme_name'] . "</text>";
-          echo "<rect width='75' height='75' x='".$y."' y='10' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
-          echo "<text fill='black' x='".$yy."' y='100'>".$rwo [$x]."</text>";
+          echo "<text class='txt' font-size='55' x='175' y='50'>". $row ['theme_name'] . "</text>";
+          echo "<rect width='75' height='75' x='".$y."' y='60' style='fill:". $rwo [$x]. "' onclick = 'ab".$x."'id='ab".$x."' />\n";
+          echo "<text fill='black' x='".$yy."' y='150'>".$rwo [$x]."</text>";
           echo "</g>";
         }
        echo "</svg><br />\n<a href='verification.php'> not sure</a></div>";

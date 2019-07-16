@@ -29,16 +29,20 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
      if ($count == 1){
        $value= 'logged';
        setcookie ('loginfo', $value);
-       header ($_SERVER ['HTTP_REFERER']);echo $row
+       header ($_SERVER ['HTTP_REFERER']);
+	echo $row;
      }else{echo "I guess not logeded in";
   }
 } }
 
-$id = $_POST ['delete_id'];
+$id = $_POST['delete_id'];
 
 if ($id){
   $UID=$_COOKIE ['UsrID'];
-  $sql->query ('DELETE FROM color WHERE UID = ' . $UID);
-  mysqli_query ($connection, $sql);
-setcookie ('testre', $id);}
-?>
+  $sql ='DELETE FROM color WHERE theme_name = "' . $id.'"';
+  if (mysqli_query ($connection, $sql))
+{	print "sussess";
+} else {print "ssessus" .  ", id: ". $id ." | " . mysqli_error ($connection);
+}
+// setcookie ('testre', $id);
+}?>
