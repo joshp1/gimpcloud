@@ -19,7 +19,7 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
    $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
    $count = mysqli_num_rows($result);
    if ($_COOKIE ['loginfo']){
-     while ($row=$res->fetch_assoc ()) {
+     while ($row=$result->fetch_assoc ()) {
        setcookie ('loginfo', '', time () - 3600);
        setcookie ('UsrID', $row ['UID']);
 
