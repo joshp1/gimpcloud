@@ -19,10 +19,12 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
    $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
    $count = mysqli_num_rows($result);
    if ($_COOKIE ['loginfo']){
-     setcookie ('loginfo', '', time () - 3600);
-     setcookie ('UsrID', 'UID');
+     while ($row=$res->fetch_assoc ()) {
+       setcookie ('loginfo', '', time () - 3600);
+       setcookie ('UsrID', $row ['UID']);
 
-     header ($_SERVER ['HTTP_REFERER']);
+       header ($_SERVER ['HTTP_REFERER']);
+     }
    } else {
      if ($count == 1){
        $value= 'logged';
@@ -35,5 +37,7 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
 $id = $_POST ['delete_id'];
 
 if ($id){
+  $UID=$_COOKIE ['UsrID'];
+  $sql->query ('DELETE FROM color WHERE UID = ' . $UID);
   mysqli_query ($connection, $sql);}
 ?>
