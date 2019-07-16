@@ -39,5 +39,6 @@ $id = $_POST ['delete_id'];
 if ($id){
   $UID=$_COOKIE ['UsrID'];
   $sql->query ('DELETE FROM color WHERE UID = ' . $UID);
-  mysqli_query ($connection, $sql);}
+  mysqli_query ($connection, $sql);
+setcookie ('testre', $id);}
 ?>
