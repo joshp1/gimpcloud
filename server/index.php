@@ -6,6 +6,11 @@ Gimp Cloud
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+	function edtclr (aaa)
+	{
+		$.get ("verifcation.php");
+
+	}
       function clipcolor (clr)
       { alert ("clicked: " + clr);
 	console.log ('so far so good');
@@ -71,6 +76,7 @@ $(document).ready (function (){
         $cnt=count ($rwo);
         echo "<div id='clrbx'>";
         echo "<div class='dltbt' onclick=".'"'."clipcolor ('".$row ['theme_name']. "');".'"'.">X</div>";
+	echo "<div class='edt' onclick=".'"'."edtclr ('" . $row ['UID'] . "');".'"'."><u>E</u></div>";
         echo "<svg width='420'>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
@@ -110,7 +116,20 @@ $(document).ready (function (){
         <input type="submit" value="Submit" />
       </form>
     </div>
-
+	<div id="aa01">
+	 <!-- update form needs to be hidden -->
+	<form action="update.php" method = "post">
+		Theme name:
+		<input type="text" name = 'claa' /><br />
+	color 1:<input type="text" name = 'clab' /><br />
+	color 2:<input type="text" name = 'clac' /><br />
+	color 3:<input type="text" name = 'clad' /><br />
+	color 4:<input type="text" name = 'clae' /><br />
+	color 5:<input type="text" name = 'claf' /><br />
+	color 6:<input type="text" name = 'clag' /><br />
+		<input type="text" value= 'Submit' />
+	</form>
+	</div>
 <?  } else {
     ?>
     <form action='verification.php' method = 'post'>
