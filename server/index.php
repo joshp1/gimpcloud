@@ -7,22 +7,23 @@ Gimp Cloud
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       function clipcolor (clr)
-      { document.getElementById ()
+      { document.getElementById ('dltbt')
         alert ("clicked: " + clr);
         document.execCommand('copy');
       }
+$(document).ready (function (){
       $("#dltbt").click (function (){
         var del_id = $(this).attr ('id');
-        $.ajax ({
-          type:'POST',
-          url : 'verification.php',
-          data: 'delete_id='+del_id,
-          success: function (data)
+        console.log ("this worls at least");
+	$.post ("verification.php",
+	{
+         delete_id: del_id
+	},
+          function (data, status)
           {
             console.log ("Click");
-          }
-        });
-      });
+          });
+      });});
       </script>
       <style>
         #clrbx
