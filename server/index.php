@@ -50,7 +50,7 @@ Gimp Cloud
         die ("Conection faild: " . $cnnn->connect_error);
       }
 
-      $sql = "SELECT * FROM color WHERE UID = $UserID ORDER BY ID";
+      $sql = "SELECT * FROM color WHERE UID = '".$UserID. "' ORDER BY ID";
       $res=$cnnn->query ($sql);
 
       if ($res->num_rows >0){

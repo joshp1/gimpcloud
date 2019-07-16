@@ -29,7 +29,7 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
      if ($count == 1){
        $value= 'logged';
        setcookie ('loginfo', $value);
-       header ($_SERVER ['HTTP_REFERER']);
+       header ($_SERVER ['HTTP_REFERER']);echo $row
      }else{echo "I guess not logeded in";
   }
 } }
