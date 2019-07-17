@@ -35,6 +35,20 @@ if (isset($_POST['un1']) and isset($_POST['ps1'])){
   }
 } }
 
+// ry to prosess data to be updated to form
+$iid= $_POST['updtae'];
+if ($iid){
+
+	$sqll="SELECT * FROM color WHERE theme_name = '".$iid."' ORDER BY id;";
+	$res = mysqli_query ($connection, $sqll) or die (mysqli_error ($connection));
+
+	while ($row = $res->fetch_assoc ()){
+		$rowo [] =$row;
+	}
+		echo json_encode ($rowo);
+}
+
+//process data to be delted (sucess)
 $id = $_POST['delete_id'];
 
 if ($id){

@@ -8,7 +8,18 @@ Gimp Cloud
     <script>
 	function edtclr (aaa)
 	{
-		$.get ("verifcation.php");
+		$.post ("verification.php",
+		{	updtae: aaa
+		},function (data, status)
+		{	var obj = JSON.parse (data);
+			$.each (obj, function (idx, ojb) {
+				var clr=ojb.theme_color.split (',');
+				console.log (clr [0]);
+				$("#cla1").val = clr[0];
+		});
+
+			console.log (data + ' ' + obj.theme_name);
+		});
 
 	}
       function clipcolor (clr)
@@ -67,7 +78,7 @@ $(document).ready (function (){
         die ("Conection faild: " . $cnnn->connect_error);
       }
 
-      $sql = "SELECT * FROM color WHERE UID = '".$UserID. "' ORDER BY ID";
+      $sql = "SELECT * FROM color WHERE UID = '".$UserID. "' ORDER BY id";
       $res=$cnnn->query ($sql);
 
       if ($res->num_rows >0){
@@ -76,7 +87,7 @@ $(document).ready (function (){
         $cnt=count ($rwo);
         echo "<div id='clrbx'>";
         echo "<div class='dltbt' onclick=".'"'."clipcolor ('".$row ['theme_name']. "');".'"'.">X</div>";
-	echo "<div class='edt' onclick=".'"'."edtclr ('" . $row ['UID'] . "');".'"'."><u>E</u></div>";
+	echo "<div class='edt' onclick=".'"'."edtclr ('" . $row ['theme_name'] . "');".'"'."><u>E</u></div>";
         echo "<svg width='420'>";
         for ($x = 0;$x<$cnt; $x++){
           $y=$x*65;
@@ -121,13 +132,13 @@ $(document).ready (function (){
 	<form action="update.php" method = "post">
 		Theme name:
 		<input type="text" name = 'claa' /><br />
-	color 1:<input type="text" name = 'clab' /><br />
-	color 2:<input type="text" name = 'clac' /><br />
-	color 3:<input type="text" name = 'clad' /><br />
-	color 4:<input type="text" name = 'clae' /><br />
-	color 5:<input type="text" name = 'claf' /><br />
-	color 6:<input type="text" name = 'clag' /><br />
-		<input type="text" value= 'Submit' />
+	color 1:<input type="text" name = 'clab' id="cla1" /><br />
+	color 2:<input type="text" name = 'clac' id="cla2" /><br />
+	color 3:<input type="text" name = 'clad' id="cla3" /><br />
+	color 4:<input type="text" name = 'clae' id="cla4" /><br />
+	color 5:<input type="text" name = 'claf' id="cla5" /><br />
+	color 6:<input type="text" name = 'clag' id="cla6" /><br />
+			<input type="submit" value = 'Submit' />
 	</form>
 	</div>
 <?  } else {
