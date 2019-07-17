@@ -15,7 +15,7 @@ Gimp Cloud
 			$.each (obj, function (idx, ojb) {
 				var clr=ojb.theme_color.split (',');
 				console.log (clr [0]);
-				$("#cla1").val = clr[0];
+				$("#cla1").val( clr[0] );
 		});
 
 			console.log (data + ' ' + obj.theme_name);
