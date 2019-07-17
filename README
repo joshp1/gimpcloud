@@ -1,4 +1,13 @@
-I'm making this app so I can send images from my phone that I ether took a picture of a drawing or drew on iPad or Samsung Note. It'll be released Creative Commons Share like.
+The intent of this app is to give a cross platform alternative to Adobe CC. It doesn't come with or work with photoshop. The intial entent is for it to work with Gimp on all platforms. 
+I don't have a MAC so unless someone makes a interface on MAC there won't be one.
+This application has four parts
+_____________________________________________________
+Gimp plugin - not started
+desktop tray icon for uploading images - not started
+Websoftware to run on server - prototype working
+mobile application - not started
+______________________________________________________
 
-It'll be simply coded and structured. I don't entend this app to get big though on the server side I might add more features like Adobe Kuler to my xml format converter This file will be updated with some notes and any updates:wq
+Versions
+0.002 - Got server software working
 
