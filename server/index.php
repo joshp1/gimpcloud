@@ -15,7 +15,13 @@ Gimp Cloud
 			$.each (obj, function (idx, ojb) {
 				var clr=ojb.theme_color.split (',');
 				console.log (clr [0]);
+				$("#claN").val( ojb.theme_name );
 				$("#cla1").val( clr[0] );
+				$("#cla2").val( clr[1] );
+				$("#cla3").val( clr[2] );
+				$("#cla4").val( clr[3] );
+				$("#cla5").val( clr[4] );
+				$("#cla6").val( clr[5] );
 		});
 
 			console.log (data + ' ' + obj.theme_name);
@@ -131,7 +137,7 @@ $(document).ready (function (){
 	 <!-- update form needs to be hidden -->
 	<form action="update.php" method = "post">
 		Theme name:
-		<input type="text" name = 'claa' /><br />
+		<input type="text" name = 'claa' id="claN" /><br />
 	color 1:<input type="text" name = 'clab' id="cla1" /><br />
 	color 2:<input type="text" name = 'clac' id="cla2" /><br />
 	color 3:<input type="text" name = 'clad' id="cla3" /><br />
